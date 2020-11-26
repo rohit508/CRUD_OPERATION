@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD OPERATION</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+	<link rel="icon" href="image/crud.png">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<h1>CRUD OPERATION</h1>
+	  </nav>
+	  <form >
+        <div class="form-row">
+            <div class="form-group col-md-2">
+              <label for="inputEmail4">First Name</label>
+              <input type="text" class="form-control" id="inputFirst" style="width: 100%;">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputPassword4">Last Name</label>
+              <input type="text" class="form-control" id="inputlast" style="width: 100%;">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail" style="width: 100%;" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-2">
+              <label for="inputEmail4">Location</label>
+              <input type="text" class="form-control" id="inputlocation" style="width: 100%;">
+			</div>
+			
+
+            <div class="form-group col-md-5">
+                <label for="inputPassword4">Phone Number</label>
+                <input type="tel" class="form-control" id="inputPhone"  style="width: 50%;"  >
+              </div>
+          </div>
+	<button type="button" class="btn btn-success" onclick="add()">CREATE</button>
+	<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">DELETE ALL</button>
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+		  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title">DELETE</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			
+			<!-- Modal body -->
+			<div class="modal-body">
+				Are You Sure You Want To Delete All Data
+			</div>
+			
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				
+			  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="deleteall()">Yes</button>
+			   <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+			</div>
+	
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+       
+      </form>
+	  
+	<h1 style="margin-top: 2%"></h1>
+	
+
+	<table class="table table-bordered" id="table">
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">First</th>
+			<th scope="col">last</th>
+			<th scope="col">Email</th>
+			<th scope="col">phone</th>
+			<th scope="col">Location</th>
+			<th scope="col">Action</th>
+		  </tr>
+		</thead>
+
+
+
+		<tbody id="listdata">
+		  <tr>
+			<td>Rohit</td>
+			<td>lachman</td>
+			<td>lachmanrohit282@gmail.com</td>
+			<td>03032173518</td>
+			<td>pakistan, karachi</td>
+			<td><button type="button" class="btn btn-danger">DELETE</button> 
+				 <button type="button" class="btn btn-warning"	 onclick=" Edititem()">EDIT</button></td>
+		  </tr>
+		  
+		  
+		</tbody>
+	  </table>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  <script src="app.js"></script>
+</body>
+</html>
